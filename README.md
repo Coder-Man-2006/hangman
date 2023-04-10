@@ -1,1 +1,1 @@
-# hangman
+This is a terminal based hangman game
