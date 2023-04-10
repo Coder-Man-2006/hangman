@@ -94,30 +94,21 @@ def play_game():
     # Check if the player has lost
     if incorrect_guesses == 6:
         print("\nYou lose! The word was", word)
-        
-        play_again = input("Would you Like to play again? ")
-    
-        if play_again.upper == 'Y':
-            play_game()
-        elif play_again.lower == 'n':
-            is_running = False
-            break
-        else:
-            is_running = False
-            break
+        break
 
     # Check if the player has won
     if "_" not in progress:
         print("\nYou win! The word was", word)
-        
-        
-        play_again = input("Would you Like to play again (Y/n)")
-    
-        if play_again.upper == 'Y':
-            play_game()
-        elif play_again.lower == 'n':
-            is_running = False
-        else:
-            is_running = False
-        
+        break
+
+
 play_game()
+
+while True:
+  play_again = input("Would you Like to play again (Y/n): ")
+      
+  if play_again.upper() == 'Y':
+    play_game()
+  else:
+    print('Goodbye for now.')
+    break
